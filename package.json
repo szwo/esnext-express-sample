@@ -3,17 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run clean & npm run transpile",
+    "build": "npm run clean && npm run transpile",
     "clean": "rimraf dist",
     "dev": "nodemon",
     "env:dev": "NODE_ENV=development",
     "env:prod": "NODE_END=production",
-    "serve:dev": "npm run env:dev & npm run serve",
-    "serve:prod": "npm run env:prod & npm run serve",
-    "serve": "npm run build & npm run start",
+    "serve:dev": "npm run env:dev && npm run serve",
+    "serve:prod": "npm run env:prod && npm run serve",
+    "serve": "npm run build && npm run start",
     "start": "node ./dist/bin/www",
     "test": "jest",
-    "transpile": "babel ./server --out-dir dist"
+    "transpile": "babel ./src --out-dir dist"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -32,7 +32,7 @@
   "nodemonConfig": {
     "exec": "npm run serve:dev",
     "watch": [
-      "server/*",
+      "src/*",
       "public/*"
     ],
     "ignore": [
