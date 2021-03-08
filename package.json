@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "dev": "nodemon",
     "env:dev": "NODE_ENV=development",
-    "env:prod": "NODE_END=production",
+    "env:prod": "NODE_ENV=production",
     "serve:dev": "npm run env:dev && npm run serve",
     "serve:prod": "npm run env:prod && npm run serve",
     "serve": "npm run build && npm run start",
