@@ -2,8 +2,9 @@
   "name": "express-sandbox",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run transpile",
+    "build": "npm run clean && cp -r src dist",
     "clean": "rimraf dist",
     "dev": "nodemon",
     "env:dev": "NODE_ENV=development",
@@ -12,8 +13,7 @@
     "serve:prod": "npm run env:prod && npm run serve",
     "serve": "npm run build && npm run start",
     "start": "node ./dist/bin/www",
-    "test": "jest",
-    "transpile": "babel ./src --out-dir dist"
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
